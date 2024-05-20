@@ -1,35 +1,46 @@
 # memoapp-spa
 
-This template should help get you started developing with Vue 3 in Vite.
+## アプリ概要
 
-## Recommended IDE Setup
+create-vueを使って作ったメモアプリ(SPA)です。
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## srcフォルダ内のファイル構成
 
-## Customize configuration
+- assets
+  - main.css
+- components
+  - MemoForm.vue
+  - MemoList.vue
+- App.vue
+- main.js
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## アプリ起動手順
 
-## Project Setup
+1. 任意のディレクトリでリポジトリをクローンする。
 
-```sh
-npm install
-```
+   ```
+     $ git clone https://github.com/icchankun/memoapp-spa.git
+   ```
 
-### Compile and Hot-Reload for Development
+   forkした場合は
 
-```sh
-npm run dev
-```
+   ```
+     $ git clone https://github.com/自身のアカウント名/memoapp-spa.git
+   ```
 
-### Compile and Minify for Production
+1. ディレクトリを移動する。
 
-```sh
-npm run build
-```
+   ```
+     $ cd memoapp-spa
+   ```
 
-### Lint with [ESLint](https://eslint.org/)
+1. npmで必要なパッケージをインストールする。
 
-```sh
-npm run lint
-```
+   ```
+     $ npm install
+   ```
+
+1. 開発サーバーを起動する。（開発サーバーを停止するには、Ctrl + C キーを押す。）
+   ```
+     $ npm run dev
+   ```
