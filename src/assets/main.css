@@ -1,0 +1,45 @@
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+#memo-list {
+  margin-right: 1.5rem;
+}
+
+#memos {
+  margin-bottom: 1rem;
+}
+
+.memo {
+  list-style: none;
+}
+
+#memo-form textarea {
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: inherit;
+}
+
+.btn {
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#add-btn {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+#memo-form .btn:not(:last-child) {
+  margin-right: 1rem;
+}
