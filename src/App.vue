@@ -1,14 +1,11 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import MemoForm from './components/MemoForm.vue'
 import MemoList from './components/MemoList.vue'
 
 const showedMemo = ref({})
 const isEditing = ref(false)
 
-const visibility = computed(() => ({
-  visibility: isEditing.value ? 'visible' : 'hidden'
-}))
 const fetchSavedId = () => {
   const savedId = localStorage.getItem('id')
   return savedId ? JSON.parse(savedId) : 0
@@ -48,7 +45,7 @@ const deleteMemo = (showedMemoId) => {
 <template>
   <MemoList :showedMemo="showedMemo" :memos="memos" @addMemo="addMemo" @showMemo="showMemo" />
   <MemoForm
-    :style="visibility"
+    v-show="isEditing"
     :showedMemo="showedMemo"
     @updateMemo="updateMemo"
     @deleteMemo="deleteMemo"
