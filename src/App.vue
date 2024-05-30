@@ -32,7 +32,7 @@ const updateMemo = (memo, updatedContent) => {
   isEditing.value = false
   showedMemo.value = {}
   const memoIndex = memos.value.indexOf(memo)
-  memos.value.splice(memoIndex, 1, { id: memo.id, content: updatedContent })
+  memos.value.splice(memoIndex, 1, { ...memo, content: updatedContent })
   localStorage.setItem('memos', JSON.stringify(memos.value))
 }
 const deleteMemo = (showedMemoId) => {
